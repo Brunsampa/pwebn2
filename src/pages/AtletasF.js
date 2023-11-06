@@ -62,7 +62,7 @@ export default function AtletasF({route}) {
                          <View style={[Styles.contener,{marginTop:40,marginEnd:10,margin:'auto'}]}>
                               <TouchableHighlight style={[Styles.btn,{backgroundColor:'#fff',borderColor:"#f13",width:210}]} onPress={()=>navigation.goBack()}
                               underlayColor={'#f12'}>
-                                   <Text style={[Styles.btnText,{color:'#f13'}]}>Voltar</Text>
+                                   <Text style={[Styles.btnText,{color:'#f13'}]}> Voltar</Text>
                               </TouchableHighlight>
                          </View>
                          </ScrollView> 
