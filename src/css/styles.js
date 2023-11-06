@@ -5,38 +5,41 @@ export default StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems:"center",
-    justifyContent:"center",
-    padding:10,
+    padding:8,
+    width:"100%",
+    backgroundColor:"#fff",
 },
   contener2:{
     flex:1,
     justifyContent:'center',
-    alignContent:'center',
     alignItems:'center',
     padding:10,
+    width:'100%',
 },
 tituloPric:{
     fontSize:45,
     fontWeight:'600',
     textAlign:'center',
+    fontFamily:"Arial",
+    color:"#23238E",
 },
 btn:{
   textAlign:"center",
   padding:10,
-  width:125,
+  width:130,
   height:45,
   margin:"auto",
   borderStyle:'solid',
-  borderColor:'#000',
+  borderColor:'#23238E',
   borderWidth:1,
   borderRadius:10,
-  backgroundColor:'#77DEE7'
+  backgroundColor:'#4D4DFF'
 },
 btn2:{
   textAlign:"center",
   padding:10,
   width:90,
-  height:42,
+  height:45,
   margin:'auto',
   borderStyle:'solid',
   borderWidth:1,
@@ -46,36 +49,37 @@ btn2:{
   color:"#000",
 },
 btnText:{
-    color:"#000",
+    color:"#fff",
     textAlign:'center',
-    padding:2
+    fontWeight:'500',
+    fontFamily:"Arial",
+    
 
 },
 input:{
-  borderWidth:1,
+  width:300,
+  height:45,
   borderStyle:'solid',
   borderColor:"#000",
-  borderRadius:10,
+  borderWidth:1,
+  borderRadius:12,
   marginTop:40,
-  marginBottom:30,
+  marginBottom:40,
   padding:10,
+  textAlign:"center",
+  margin:"auto"
 },
 
 caixaBtn:{
   flex:1,
-  width:'100%',
-  justifyContent:'space-between',
+  width:'98%',
   alignItems:'center',
-  justifyContent:'center',
+  justifyContent:'space-around',
   flexDirection:'row',
-  marginTop:10,
-  margin:'auto',
-  marginEnd:10,
 },
 caxaTexto:{
   width:300,
   height:40,
-  padding:10,
   margin:'auto',
   marginBottom:20,
   marginTop:50,
@@ -91,7 +95,6 @@ caxaTexto2:{
   margin:'auto',
   marginBottom:20,
   marginTop:80,
-  padding:8,
   backgroundColor:'#55f21',
   color:"#fff",
   borderRadius:10,
@@ -99,15 +102,15 @@ caxaTexto2:{
   zIndex:1,
 },
 caixaJogador:{
-  width:320,
-  height:480,
+  width:310,
+  height:500,
   borderStyle:'solid',
   borderWidth:2,
   borderColor:'#5f6593',
   marginTop:10,
   marginEnd:10,
   borderRadius:10,
-  padding:10,
+  fontFamily:'Arial',
   margin:'auto'
 },
 
@@ -116,7 +119,7 @@ caixaNome:{
   margin:'auto',
   marginTop:5,
   marginEnd:5,
-  padding:12,
+  padding:10,
   backgroundColor:'#5f6593',
   borderRadius:1,
   fontWeight:"bold",
@@ -133,20 +136,19 @@ caixaDadosJ:{
 },
 caixaimagem:{
   width:'99%',
-  height:180,
+  height:210,
   margin:'auto',
-  borderStyle:'solid',
-  borderWidth:2,
-  borderColor:'#5f6593',
 },
 image:{
   width:'100%',
   height:'98%',
-  objectFit:'cover',
+  objectFit:'contain',
+  borderTopEndRadius:5,
+  borderTopLeftRadius:5,
 },
 imagemBackgroud:{
-  width:'100%',
-  height:290,
+  width:320,
+  height:300,
   margin:'auto',
   marginTop:10,
   marginEnd:10,
@@ -157,7 +159,21 @@ imagemBackgroud:{
   alignContent:'center',
   flexDirection:'column',
   objectFit:'contain'
-}
-
+},
+caxaF:{
+  width:150,
+  height:30,
+  borderRadius:15
+  ,backgroundColor:
+  '#daa520',
+  textAlign:'center',
+  margin:20,
+},
+a:{
+  width:'100%',
+  padding:8,
+  textAlign:'center'
+  
+},
 });
 

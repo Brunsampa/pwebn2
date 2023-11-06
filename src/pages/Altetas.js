@@ -50,18 +50,18 @@ export default function Atletas({route}) {
           <Text style={Styles.tituloPric}>  Buscar Jogador </Text>
           </View>
 
-          <View>
+          <View style={Styles.contener}>
 
           <TextInput style={Styles.input} placeholder='Digite o nome do jogador' 
           onChangeText={(text)=>setNomeJ(text)} value={nomeJ}></TextInput>
 
           <View style={Styles.caixaBtn}>
 
-          <TouchableHighlight style={Styles.btn}  onPress={()=>mostrarPesquisa()} underlayColor={'#549'} >
+          <TouchableHighlight style={Styles.btn}  onPress={()=>mostrarPesquisa()} underlayColor={'#daa520'} >
           <Text style={Styles.btnText}>Buscar Jogador</Text>
           </TouchableHighlight>
 
-          <TouchableHighlight style={Styles.btn} onPress={()=>navigation.goBack()} underlayColor={'#f13'}>
+          <TouchableHighlight style={Styles.btn} onPress={()=>navigation.goBack()} underlayColor={'#f12'}>
           <Text style={Styles.btnText}>Voltar</Text>
           </TouchableHighlight>
 
@@ -70,13 +70,8 @@ export default function Atletas({route}) {
           </View>
 
           <View>
-               {dados.length<1
-
+               {dados.length>=1
                ?
-                    <ImageBackground style={Styles.imagemBackgroud} source={require('../assets/jogadorf.png')}>
-                         
-                    </ImageBackground>
-               :
                     <View style={Styles.contener2}>
                          <ScrollView>
                               {dados.map((el,index)=>(
@@ -93,27 +88,36 @@ export default function Atletas({route}) {
                                         </View>
                                         <View style={Styles.caixaBtn}>
 
-                                             <TouchableHighlight style={Styles.btn2 }  onPress={()=>alert("Buscar Jogador")} underlayColor={'#f12'} >
+                                             <TouchableHighlight style={[Styles.btn2,{backgroundColor:"#f12"}] }  onPress={()=>navigation.goBack()} underlayColor={'#fff'} >
                                              <Text style={{color:'#000', textAlign:'center'}}>Sair</Text>
                                              </TouchableHighlight>
 
-                                             <TouchableHighlight style={Styles.btn2} onPress={()=>favoritarJ(index)} underlayColor={'#ccc'}>
+                                             <TouchableHighlight style={[Styles.btn2,{backgroundColor:'#daa520'}]} onPress={()=>favoritarJ(index)} underlayColor={'#fff'}>
                                              <Text style={{color:'#000',textAlign:'center'}}>Favoritar</Text>
                                              </TouchableHighlight>
 
                                         </View>
                                    </View>
+                                   
                               ))}
+                              <View style={[Styles.contener,{marginTop:10,marginEnd:10}]}>
+                                   <TouchableHighlight style={[Styles.btn,{backgroundColor:"#fff",borderColor:"#f12"}]} onPress={()=>navigation.goBack()}
+                                        underlayColor={'#f12'}>
+                                             <Text style={[Styles.btnText,{color:'#f12'}]}>Voltar</Text>
+                                   </TouchableHighlight>
+                              </View>  
                          </ScrollView>
-                    </View>    
-               }      
+                    </View>  
+                    :
+                    <View style={[Styles.contener,{marginTop:40,marginEnd:10,margin:'auto',width:'100%'}]}>
+                         <ImageBackground style={Styles.imagemBackgroud} source={require('../../assets/jogador2.png')}>
+                              
+                         </ImageBackground>  
+                    </View>
+               }   
+               
           </View>
-          {/* <View style={[Styles.contener,{marginTop:10,marginEnd:10,opacity:0.1}]}>
-               <TouchableHighlight style={Styles.btn} onPress={()=>navigation.goBack()}
-               underlayColor={'#f12'}>
-                    <Text style={Styles.btnText}>Voltar</Text>
-               </TouchableHighlight>
-          </View> */}
+          
      
      </ScrollView>
 

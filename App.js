@@ -1,12 +1,13 @@
 import {react, useState } from 'react';
 import {SafeAreaView, View,Text,TextInput,TouchableHighlight} from 'react-native';
-import Home from './components/Home'
-import Atletas from './components/Altetas';
-import Main from './components/Main';
-import Styles from './css/styles';
+import Home from './src/pages/Home';
+import Atletas from './src/pages/Altetas';
+import Main from './src/pages/Main';
+import AtletasF from './src/pages/AtletasF';
+import Styles from './src/css/styles';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import AtletasF from './components/AtletasF';
+
 
 export default function App() {
   const Stack =createNativeStackNavigator();
