@@ -175,5 +175,39 @@ a:{
   textAlign:'center'
   
 },
+modalS:{
+  margin:20,
+  padding:20,
+  flex: 1,
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+modalC:{
+  margin:10,
+  padding:10,
+},
+modalBtn:{
+    borderWidth:1,
+    borderColor:'#45f',
+    borderRadius:10
+},
+modalBtnT:{
+  padding:10,
+  margin:2,
+  color:'#45f',
+},
+textoModal:{
+  padding:10,
+  color:"#45f",
+  fontSize:21
+},
+caixaTemp:{
+  width:'70%',
+  height:40,
+  padding:2,
+  margin:60,
+  backgroundColor:"#45f",
+  borderRadius:10,
+},
 });
 
