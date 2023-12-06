@@ -9,24 +9,11 @@ export default function Atletas({route}) {
      const [nomeJ,setNomeJ]=useState("")
      const [dados,setDados]=useState([])
      const navigation=useNavigation()
-     const [temperatura,setTemperatura]=useState(0);
-     const [mostra, setMostra]=useState(false);
-     const [visivel,setVisivel]=useState(true)
      const {listaF,setListaF}=route.params;
+     const {temperatura}=route.params;
 
 
-     async function verTemperatura(){
-          const UrlBase=`https://api.thingspeak.com/update?api_key=CLDBTEONMSR8ZTGJ&field1=0
-          `
-          try {
-               let res= await fetch(UrlBase)
-               let resposta= await res.json()
-               setTemperatura(resposta)
-          } catch (error) {
-               
-          }
-     }
-
+    
 
 
      async function buscaJ(nome) {
@@ -36,8 +23,7 @@ export default function Atletas({route}) {
                let res= await fetch(UrlBase)
                let resposta= await res.json()
                setDados(resposta)
-               verTemperatura()
-               setMostra(true)
+               alert(temperatura)
           }catch{
                console.log('erro')
           }
@@ -66,24 +52,7 @@ export default function Atletas({route}) {
   return (
     <SafeAreaView style={Styles.contener}>
      <ScrollView>
-         {mostra && 
-          <View>
-               <Modal visible={visivel} animationType='fade' transparent={false} >
-                    <View style={Styles.modalS}>
-                    <View style={Styles.modalC}>
-                         <Text style={[Styles.textoModal,{color:(temperatura)>20?"#f14":"#45f"}]} >
-                              A Temperatura do ambiente é {temperatura}
-                              </Text>
-                    </View>
-                    <View style={Styles.modalC}>
-                         <Pressable  style={Styles.modalBtn} onPress={()=>setVisivel(!visivel)}>
-                              <Text style={Styles.modalBtnT}>Fechar</Text>
-                         </Pressable>
-                    </View>
-                    </View>
-               </Modal>
-          </View>
-         }
+         
           <View>
                
           <Text style={Styles.tituloPric}>  Buscar Jogador  </Text>
@@ -151,7 +120,7 @@ export default function Atletas({route}) {
                
                     <View style={[Styles.contener,{marginTop:40,marginEnd:10,margin:'auto',width:'100%'}]}>
                          <View style={Styles.caixaTemp}> 
-                              <Text style={{textAlign:'center',padding:5,color:"#fff"}}>A temperatura {temperatura}</Text>
+                              <Text style={{textAlign:'center',padding:5,color:"#fff"}}>A temperatura no estadio é {temperatura}</Text>
                          </View>
                          <ImageBackground style={Styles.imagemBackgroud} source={require('../../assets/jogador2.png')}>
                               

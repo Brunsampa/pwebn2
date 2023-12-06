@@ -5,7 +5,7 @@ import Styles from '../css/styles';
 
 export default function AtletasF({route}) {
      const navigation=useNavigation()
-     const {listaF,setListaF}=route.params;
+     const {listaF,setListaF,temperatura}=route.params;
 
      function desfavoritarJ(index){
           const lstaAux=[...listaF]
@@ -70,6 +70,9 @@ export default function AtletasF({route}) {
                     </View>
                :
                <View style={[Styles.contener,{marginTop:40,marginEnd:10,margin:'auto',width:'100%'}]}>
+                    <View style={Styles.caixaTemp}> 
+                              <Text style={{textAlign:'center',padding:5,color:"#fff"}}>A temperatura no estadio é {temperatura}</Text>
+                    </View>
                     <ImageBackground style={Styles.imagemBackgroud} source={require('../../assets/jogadorf.png')}>
                          
                     </ImageBackground>
